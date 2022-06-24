@@ -1,6 +1,17 @@
 const API_KEY = 'de1ec00c499ccad247802d2ca58aba55'
 const API_BASE= 'https://api.themoviedb.org/3'
 
+
+const basicFecth = async (endpoint) => {
+   
+    const req = await fecth( '${API_BASE}${endpoint}')
+    const json =await req.json()
+    return json  
+
+} 
+
+
+
 export default{
 
     getHomeList: async () => {
