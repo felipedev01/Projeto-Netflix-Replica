@@ -1,15 +1,17 @@
 import Tmdb from './Tmdb';
-import React, {useEffect} from 'react';
+import React, {useEffect,useState} from 'react';
 
 
 function App() {
+   
+  const [movieList, setMovieList]=useState([]);
 
   useEffect(()=>{
 
     const loadAll = async () => {
       
       let list = await Tmdb.getHomeList();
-      console.log(list)
+      setMovieList(list)
 
     }
 
@@ -19,7 +21,11 @@ function App() {
   
 
   return (
-   <h1>Hello World!</h1>
+   <div className='page'>
+
+    
+
+   </div>
   )
 }
 
